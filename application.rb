@@ -7,6 +7,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'fileutils'
 require_relative 'payload'
+require_relative 'chain'
 
 def download (url, file)
   File.open(file, "wb+") do |local_file|
@@ -73,7 +74,6 @@ def main
 
   puts "Installation has been started"
 
-  require_relative 'chain'
   chain(payloads)
 
   puts "Done! Have a nice day :3"
